@@ -1,0 +1,21 @@
+<div class="valign-wrapper loginContainer">
+  <div class="loginCard">
+    <div style="text-align: center;">
+      <img class="userImg" src="assets/avatar.png" />
+    </div>
+    <div class="row">
+      <div class="md-form">
+        <input mdbInput placeholder="Username" type="text" id="userNameInput" class="form-control" [formControl]="username">
+      </div>
+      <div class="md-form">
+        <input mdbInput placeholder="Password" type="password" id="passwordInput" class="form-control" [formControl]="password">
+      </div>
+    </div>
+    <div class="alert alert-warning" *ngIf='!isValidLogin'>{{errorMessage}}</div>
+    <div class="alert alert-success" *ngIf='isValidLogin'>{{successMessage}}</div>
+
+    <div class="row btnContainer">
+      <a class="waves-effect waves-light btn" (click)="loginClicked()">Login</a>
+    </div>
+  </div>
+</div>

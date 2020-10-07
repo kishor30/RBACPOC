@@ -1,0 +1,25 @@
+.listContainer {
+    margin: 40px;
+}
+.listRow {
+    padding: 8px;
+    border-left: 8px solid lightseagreen;
+    background: aliceblue
+}
+.titleCostContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.detailContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.ratingDiv, .price {
+    margin-top: 16px;
+}
+.starIcon {font-size: 1.1em !important}
+.deleteIcon {
+    margin-top: 16px;
+    font-size: 1.2em !important;
+    cursor: pointer;
+}

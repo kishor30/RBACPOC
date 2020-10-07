@@ -1,0 +1,18 @@
+.loginContainer{
+    height: 100vh;
+    justify-content: center;
+}
+.loginCard {
+    padding: 48px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: aliceblue;
+}
+.userImg {
+    height: 100px;
+    width: 100px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+.btnContainer {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<nav>
+  <div class="nav-wrapper teal accent-4">
+    <ul class="right hide-on-med-and-down">
+      <li (click)="logoutHandler()">
+        <p>Logout</p>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="listContainer">
+  <p class="alert alert-failure" *ngIf="isForbidden">You do not have admin previlleges.Contact your administration.</p>
+  <div *ngFor="let book of books" class="row listRow">
+    <div class="col s12">
+      <div class="titleCostContainer">
+        <h5>
+          {{book.bookname}}
+        </h5>
+        <i *ngIf="isAdmin" class="material-icons grey-text deleteIcon" (click)="deleteBook(book.bookId)">delete</i>
+      </div>
+      <div class="detailContainer">
+        <p>
+          <strong>Author: </strong>
+          <em>{{book.author}}</em>
+        </p>
+        <div class="ratingDiv">
+          <i class="material-icons orange-text starIcon">star</i>
+          <i class="material-icons orange-text starIcon">star</i>
+          <i class="material-icons orange-text starIcon">star</i>
+          <i class="material-icons  orange-text starIcon">star</i>
+          <i class="material-icons starIcon">star_border</i>
+        </div>
+        <strong class="green-text price">Price: $ {{book.price}}</strong>
+      </div>
+    </div>
+  </div>
+</div>
